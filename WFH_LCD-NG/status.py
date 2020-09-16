@@ -167,5 +167,5 @@ def index():
     
 if __name__ == '__main__':
     app.debug = True
-    app.run(host='0.0.0.0')
+    app.run(host='10.0.90.175')
     #app.run(host='10.0.0.113')
