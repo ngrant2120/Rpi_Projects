@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>Status Indicator</h1>
+
+<p>This page allows you to select the text of your LCD status indicator.</p>
+
+<p id="demo"></p>
+
+<button onclick="availableFunc()">Available</button>
+<br>
+<button onclick="busyFunc()">Busy</button>
+<br>
+<button onclick="awayFunc()">Away</button>
+<br>
+<button onclick="meetingFunc()">In a meeting</button>
+<br>
+<button onclick="phoneFunc()">On the phone</button>
+<br>
+<button onclick="fieldFunc()">In the field</button>
+<br>
+<button onclick="remoteFunc()">Working Remotely</button>
+<br>
+<button onclick="lunchFunc()">At Lunch</button>
+<br>
+<button onclick="doctorFunc()">Doctors Office</button>
+<br>
+<button onclick="dentistFunc()">Dentist Office</button>
+<br>
+<button onclick="clearFunc()">Clear Display</button>
+
+
+
+<script>
+
+var available = "http://0.0.0.0:5000/api/available";
+var busy = "http://0.0.0.0:5000/api/busy";
+var away = "http://0.0.0.0:5000/api/away";
+var meeting = "http://0.0.0.0:5000/api/meeting";
+var phone = "http://0.0.0.0:5000/api/phone";
+var field = "http://0.0.0.0:5000/api/field";
+var remote = "http://0.0.0.0:5000/api/remote";
+var lunch = "http://0.0.0.0:5000/api/lunch";
+var doctor = "http://0.0.0.0:5000/api/doctor";
+var dentist = "http://0.0.0.0:5000/api/dentist";
+var clear = "http://0.0.0.0:5000/api/clear";
+
+function availableFunc() {
+  var xmlhttp = new XMLHttpRequest();
+  xmlhttp.open("GET", available);
+  document.getElementById("demo").innerHTML = "Status set to Available";
+  xmlhttp.send();
+}
+function busyFunc() {
+  var xmlhttp = new XMLHttpRequest();
+  xmlhttp.open("GET", busy);
+  document.getElementById("demo").innerHTML = "Status set to Busy";
+  xmlhttp.send();
+}
+function awayFunc() {
+  var xmlhttp = new XMLHttpRequest();
+  xmlhttp.open("GET", away);
+  document.getElementById("demo").innerHTML = "Status set to Away";
+  xmlhttp.send();
+}
+function meetingFunc() {
+  var xmlhttp = new XMLHttpRequest();
+  xmlhttp.open("GET", meeting);
+  document.getElementById("demo").innerHTML = "Status set to in a meeting";
+  xmlhttp.send();
+}
+function phoneFunc() {
+  var xmlhttp = new XMLHttpRequest();
+  xmlhttp.open("GET", phone);
+  document.getElementById("demo").innerHTML = "Status set to on the phone";
+  xmlhttp.send();
+}
+function fieldFunc() {
+  var xmlhttp = new XMLHttpRequest();
+  xmlhttp.open("GET", field);
+  document.getElementById("demo").innerHTML = "In the field";
+  xmlhttp.send();
+}
+function remoteFunc() {
+  var xmlhttp = new XMLHttpRequest();
+  xmlhttp.open("GET", remote);
+  document.getElementById("demo").innerHTML = "Working Remotely";
+  xmlhttp.send();
+}
+function lunchFunc() {
+  var xmlhttp = new XMLHttpRequest();
+  xmlhttp.open("GET", lunch);
+  document.getElementById("demo").innerHTML = "At Lunch";
+  xmlhttp.send();
+}
+function doctorFunc() {
+  var xmlhttp = new XMLHttpRequest();
+  xmlhttp.open("GET", th);
+  document.getElementById("doctor").innerHTML = "Doctors Office";
+  xmlhttp.send();
+}
+function dentistFunc() {
+  var xmlhttp = new XMLHttpRequest();
+  xmlhttp.open("GET", th);
+  document.getElementById("dentist").innerHTML = "Dentist Office";
+  xmlhttp.send();
+} 
+function clearFunc() {
+  var xmlhttp = new XMLHttpRequest();
+  xmlhttp.open("GET", clear);
+  document.getElementById("demo").innerHTML = "Clear Status Screen";
+  xmlhttp.send();
+}
+</script>
+
+</body>
+</html>
